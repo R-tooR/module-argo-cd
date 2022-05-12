@@ -3,10 +3,10 @@ provider "kubernetes" {
   cluster_ca_certificate = base64decode(var.kubernetes_cluster_cert_data)
   host                   = var.kubernetes_cluster_endpoint
 
-  exec {
-    api_version = "client.authentication.k8s.io/v1alpha1"
-    command     = "az login"
-  }
+#  exec {
+#    api_version = "client.authentication.k8s.io/v1alpha1"
+#    command     = "az login"
+#  }
 }
 
 provider "helm" {
@@ -15,10 +15,10 @@ provider "helm" {
     cluster_ca_certificate = base64decode(var.kubernetes_cluster_cert_data)
     host                   = var.kubernetes_cluster_endpoint
 
-    exec {
-      api_version = "client.authentication.k8s.io/v1alpha1"
-      command     = "az login"
-    }
+#    exec {
+#      api_version = "client.authentication.k8s.io/v1alpha1"
+#      command     = "az login"
+#    }
   }
 }
 
