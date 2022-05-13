@@ -14,8 +14,11 @@ provider "helm" {
 #    load_config_file       = false
     cluster_ca_certificate = base64decode(var.kubernetes_cluster_cert_data)
     host                   = var.kubernetes_cluster_endpoint
+    client_certificate     = var.kubernetes_client_certificate
+    client_key             = var.kubernetes_client_key
 
-#    exec {
+
+    #    exec {
 #      api_version = "client.authentication.k8s.io/v1alpha1"
 #      command     = "az login"
 #    }

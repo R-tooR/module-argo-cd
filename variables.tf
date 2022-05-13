@@ -4,6 +4,12 @@ variable "kubernetes_cluster_cert_data" {
 variable "kubernetes_cluster_endpoint" {
   type = string
 }
+variable "kubernetes_client_certificate" {
+  type = string
+}
+variable "kubernetes_client_key" {
+  type = string
+}
 variable "kubernetes_cluster_id" {
   type = string
 }
